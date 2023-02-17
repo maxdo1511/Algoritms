@@ -13,6 +13,7 @@ public class Tree {
         private class Item {
             int id;
             Object item;
+            Node brunch;
 
             public Item(int id, Object item){
                 this.id = id;
@@ -38,6 +39,7 @@ public class Tree {
                 // налево
                 if (node.left == null) {
                     node.left = new Node(item, obj, null, null);
+                    node.left.root.brunch = node;
                     return;
                 }
                 node = node.left;
@@ -45,6 +47,7 @@ public class Tree {
                 if (node.root.id < item) {
                     if (node.right == null) {
                         node.right = new Node(item, obj, null, null);
+                        node.right.root.brunch = node;
                         return;
                     }
                     node = node.right;
@@ -61,13 +64,23 @@ public class Tree {
             while (node != null) {
                 if (node.root.id > item) {
                     if (node.left.root.id == item) {
-                        node.left = null;
+                        Node mode = deleteTreeItem(node.left);
+                        if (mode == null) {
+                            node.left = null;
+                            return;
+                        }
+                        node.left = mode;
                         return;
                     }
                     node = node.left;
                 } else {
                     if (node.right.root.id == item) {
-                        node.right = null;
+                        Node mode = deleteTreeItem(node.right);
+                        if (mode == null) {
+                            node.right = null;
+                            return;
+                        }
+                        node.right = mode;
                         return;
                     }
                     node = node.right;
@@ -76,6 +89,17 @@ public class Tree {
         }catch (NullPointerException ignored){
 
         }
+    }
+
+    public int getDeep() {
+        return 0;
+    }
+
+    public void print() {
+        int i = 0;
+        Node node = root;
+        System.out.println(root.root.item);
+        printItemsOfTree(node);
     }
 
     public Object get(int item) {
@@ -96,6 +120,36 @@ public class Tree {
             return null;
         }
         return null;
+    }
+
+    private Node deleteTreeItem(Node item) {
+        Node node = getMaxItemInRoot(item);
+        if (node.equals(item)) {
+            return null;
+        }
+        return node;
+    }
+
+    private Node getMaxItemInRoot(Node root) {
+        while (root != null) {
+            if (root.right == null) {
+                return root;
+            }
+            root = root.right;
+        }
+        return null;
+    }
+
+    private void printItemsOfTree(Node root) {
+        if (root.left != null) {
+            System.out.print(root.left.root.item + " ");
+            printItemsOfTree(root.left);
+        }
+        if (root.right != null) {
+            System.out.print(root.right.root.item + " ");
+            printItemsOfTree(root.right);
+        }
+        System.out.println(" ");
     }
 
 }

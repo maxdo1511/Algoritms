@@ -12,8 +12,8 @@ public class Main {
         tree.add(11, "11");
         tree.add(12, "12");
         tree.add(10, "10");
-        tree.remove(3);
-        System.out.println(tree.get(7));
-        System.out.println(tree.get(12));
+        tree.print();
+        tree.remove(5);
+        tree.print();
     }
 }
