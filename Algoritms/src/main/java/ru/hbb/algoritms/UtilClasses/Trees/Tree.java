@@ -1,4 +1,4 @@
-package ru.hbb.algoritms.UtilClasses;
+package ru.hbb.algoritms.UtilClasses.Trees;
 
 public interface Tree {
 

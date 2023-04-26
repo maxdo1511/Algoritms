@@ -1,43 +1,28 @@
-package ru.hbb.algoritms.UtilClasses;
+package ru.hbb.algoritms.UtilClasses.Trees;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
 
 public class BinaryTree implements Tree {
 
     Node root;
-
-    class Node {
-        int value;
-        Node left;
-        Node right;
-
-        Node(int value) {
-            this.value = value;
-            right = null;
-            left = null;
-        }
-    }
 
     public BinaryTree() {
 
     }
 
     public void add(int value) {
-        root = addRecursive(root, value);
+        root = addRecursive(root, value, root == null ? TreeColor.RED : root.color);
     }
 
-    private Node addRecursive(Node current, int value) {
+    private Node addRecursive(Node current, int value, TreeColor color) {
 
         if (current == null) {
-            return new Node(value);
+            return new Node(value, TreeColor.getNext(color));
         }
 
         if (value < current.value) {
-            current.left = addRecursive(current.left, value);
+            current.left = addRecursive(current.left, value, current.color);
         } else if (value > current.value) {
-            current.right = addRecursive(current.right, value);
+            current.right = addRecursive(current.right, value, current.color);
         }
 
         return current;

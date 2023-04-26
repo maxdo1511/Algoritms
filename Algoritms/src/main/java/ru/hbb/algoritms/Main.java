@@ -1,7 +1,7 @@
 package ru.hbb.algoritms;
 
-import ru.hbb.algoritms.UtilClasses.BinaryTree;
-import ru.hbb.algoritms.UtilClasses.Tree;
+import ru.hbb.algoritms.UtilClasses.Trees.BinaryTree;
+import ru.hbb.algoritms.UtilClasses.Trees.Tree;
 
 public class Main {
     public static void main(String[] args) {
