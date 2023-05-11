@@ -4,9 +4,7 @@ import ru.hbb.algoritms.UtilClasses.Map.CustomHashMap;
 import ru.hbb.algoritms.UtilClasses.Map.CustomMap;
 import ru.hbb.algoritms.UtilClasses.Trees.Node;
 
-import java.util.HashMap;
-
-public class TreesTest {
+public class HashTabTest {
 
     public static void main(String[] args) {
         CustomMap<String, Integer> map = new CustomHashMap<>(10);
@@ -24,6 +22,22 @@ public class TreesTest {
         System.out.println(map.values());
         //System.out.println(map.get(2));
         //System.out.println(map.get(444));
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        String stroka = "superlongstroka";
+        CustomMap<String, Integer> map1 = new CustomHashMap<>(stroka.length());
+        for (char c : stroka.toCharArray()) {
+            if (map1.contains(String.valueOf(c))) {
+                map1.put(String.valueOf(c), map1.get(String.valueOf(c)) + 1);
+            }else {
+                map1.put(String.valueOf(c), 1);
+            }
+        }
+        for (String key : map1.keySet()) {
+            System.out.println(key + " " + map1.get(key));
+        }
     }
 
     private boolean RedAndBlack_1(Node node) {

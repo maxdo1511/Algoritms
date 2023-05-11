@@ -95,6 +95,19 @@ public class CustomHashMap<K, V> implements CustomMap<K, V> {
     }
 
     @Override
+    public boolean contains(K key) {
+        int key_place = getKeyInHash(key);
+        Node node = table.get(key_place);
+        while (node != null) {
+            if (node.real_key.equals(key)) {
+                return true;
+            }
+            node = node.next;
+        }
+        return false;
+    }
+
+    @Override
     public int size() {
         return size;
     }

@@ -11,5 +11,6 @@ public interface CustomMap<K, V> {
     int size();
     List<V> values();
     Set<K> keySet();
+    boolean contains(K key);
 
 }
