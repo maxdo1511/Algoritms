@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2023-11-16T18:57:49.964Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0" etag="uwjHJ_-Cr0bOlFKdKZrJ" version="22.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-16T20:56:15.060Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0" etag="eo4d3iLdhL7nE_EN4tJk" version="22.1.2" type="github">
   <diagram name="Page-1" id="2a216829-ef6e-dabb-86c1-c78162f3ba2b">
-    <mxGraphModel dx="2347" dy="1152" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1386" dy="793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="7a84cebc1def654-1" value="" style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;perimeter=ellipsePerimeter;outline=standard;symbol=general;" parent="1" vertex="1">
-          <mxGeometry x="260" y="265" width="50" height="50" as="geometry" />
+        <mxCell id="7a84cebc1def654-1" value="Получен запрос&lt;br&gt;на выполнение&lt;br&gt;доп. работ" style="shape=mxgraph.bpmn.shape;html=1;verticalLabelPosition=middle;labelBackgroundColor=#ffffff;verticalAlign=middle;perimeter=ellipsePerimeter;outline=standard;symbol=general;align=center;horizontal=1;labelPosition=center;" parent="1" vertex="1">
+          <mxGeometry x="220" y="237.5" width="100" height="105" as="geometry" />
         </mxCell>
         <mxCell id="7a84cebc1def654-2" value="Task" style="shape=ext;rounded=1;html=1;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="360" y="250" width="120" height="80" as="geometry" />
